@@ -4,3 +4,9 @@
 scientific applications.
 
 
+# Build requirements
+
+* a C++11 capable compiler 
+* cmake to create the make- or solution-files
+* sphinx including the RTD theme for building the documentation
+* plplot to build the tools  

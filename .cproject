@@ -163,17 +163,17 @@
 			<resource resourceType="PROJECT" workspacePath="/testdata"/>
 		</configuration>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
 		<buildTargets>
 			<target name="html" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>CMAKE_BUILD_TOOL</buildCommand>
 				<buildArguments/>
-				<buildTarget>html</buildTarget>
+				<buildTarget>clean html</buildTarget>
 				<stopOnError>true</stopOnError>
 				<useDefaultCommand>true</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
 			</target>
 		</buildTargets>
 	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>

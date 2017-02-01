@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_eCBBIOh7Eea98MIxkBp_xA" name="testdata">
+  <packagedElement xmi:type="uml:Package" xmi:id="_i_e4UOiJEeanXYNMF0svnQ" name="desy">
+    <packagedElement xmi:type="uml:Package" xmi:id="_pMAE8OiJEeanXYNMF0svnQ" name="testdata">
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_LrxhQOiJEeanXYNMF0svnQ" name="uint16_t">
+        <ownedComment xmi:id="_TsAuQOiJEeanXYNMF0svnQ" annotatedElement="_LrxhQOiJEeanXYNMF0svnQ">
+          <body>16Bit unsigned integer</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_x0FKgOiIEeanXYNMF0svnQ" name="uint8_t">
+        <ownedComment xmi:id="_1tBK8OiIEeanXYNMF0svnQ" annotatedElement="_x0FKgOiIEeanXYNMF0svnQ">
+          <body>8Bit unsigned integer</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_0h8pgOiJEeanXYNMF0svnQ" name="uint32_t">
+        <ownedComment xmi:id="_3qlOYOiJEeanXYNMF0svnQ" annotatedElement="_0h8pgOiJEeanXYNMF0svnQ">
+          <body>32Bit unsigned integer type</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_91cOIOiJEeanXYNMF0svnQ" name="uint64_t">
+        <ownedComment xmi:id="_--4icOiJEeanXYNMF0svnQ" annotatedElement="_91cOIOiJEeanXYNMF0svnQ">
+          <body>64Bit unsigned integer</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_wuyy4OiHEeahyN02DkOTsg" name="random_variable">
+        <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_KEt5UOiIEeanXYNMF0svnQ" parameter="_KEw8oOiIEeanXYNMF0svnQ _KEyKwOiIEeanXYNMF0svnQ">
+          <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_KEw8oOiIEeanXYNMF0svnQ" default="_KEw8oeiIEeanXYNMF0svnQ" parameteredElement="_KEw8oeiIEeanXYNMF0svnQ">
+            <ownedDefault xmi:type="uml:Class" xmi:id="_KEw8oeiIEeanXYNMF0svnQ" name="G" templateParameter="_KEw8oOiIEeanXYNMF0svnQ"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_KEyKwOiIEeanXYNMF0svnQ" default="_KEyKweiIEeanXYNMF0svnQ" parameteredElement="_KEyKweiIEeanXYNMF0svnQ">
+            <ownedDefault xmi:type="uml:Class" xmi:id="_KEyKweiIEeanXYNMF0svnQ" name="D" templateParameter="_KEyKwOiIEeanXYNMF0svnQ"/>
+          </ownedParameter>
+        </ownedTemplateSignature>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_6UIK4OiGEea98MIxkBp_xA" name="gaussian_random_variable &lt;T>" useCase="_06mAwOiOEeanXYNMF0svnQ">
+        <templateBinding xmi:id="_vgArkOiHEeahyN02DkOTsg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_dmJp4OiOEeanXYNMF0svnQ" name="uniform_random_variable &lt;T>" useCase="_xUmxgOiOEeanXYNMF0svnQ"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_xUmxgOiOEeanXYNMF0svnQ" name="create uniform random numbers" subject="_dmJp4OiOEeanXYNMF0svnQ"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_06mAwOiOEeanXYNMF0svnQ" name="generate Gaussian random numbers" subject="_6UIK4OiGEea98MIxkBp_xA"/>
+</uml:Model>
