@@ -15,7 +15,7 @@ Supported datatypes
 
 *libtestdata* provides random variables of the following *primitive* types:
 
-.. figure:: images/primitive_types.png
+.. figure:: images/supported_types.png
    :width: 100%
    :align: center
    

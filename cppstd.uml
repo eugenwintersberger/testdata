@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_aD108Ok3EearQom7w1n-lA" name="std">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_g__HsOk3EearQom7w1n-lA" name="uint8_t"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QO1CMOk4EearQom7w1n-lA" name="uint16_t"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_U3uf8Ok4EearQom7w1n-lA" name="uint32_t"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_WNwewOk4EearQom7w1n-lA" name="uint64_t"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_ZcCYoOk4EearQom7w1n-lA" name="int8_t"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bk9M8Ok4EearQom7w1n-lA" name="int16_t"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_fb0JwOk4EearQom7w1n-lA" name="int32_t"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_guhu0Ok4EearQom7w1n-lA" name="int64_t"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_jL_PwOk4EearQom7w1n-lA" name="float"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_sQNpUOk4EearQom7w1n-lA" name="double"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_wehc0Ok4EearQom7w1n-lA" name="string"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1XKmwOk4EearQom7w1n-lA" name="complex">
+    <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_cSbdUOlAEearQom7w1n-lA" name="T" parameter="_ddilkOlAEearQom7w1n-lA">
+      <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_ddilkOlAEearQom7w1n-lA" parameteredElement="_VLgogOlBEearQom7w1n-lA">
+        <ownedParameteredElement xmi:type="uml:PrimitiveType" xmi:id="_VLgogOlBEearQom7w1n-lA" name="T" templateParameter="_ddilkOlAEearQom7w1n-lA"/>
+      </ownedParameter>
+    </ownedTemplateSignature>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_zsXCEOlJEearQom7w1n-lA" name="bool"/>
+</uml:Model>
