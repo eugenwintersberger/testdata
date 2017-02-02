@@ -2,26 +2,6 @@
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_eCBBIOh7Eea98MIxkBp_xA" name="testdata">
   <packagedElement xmi:type="uml:Package" xmi:id="_i_e4UOiJEeanXYNMF0svnQ" name="desy">
     <packagedElement xmi:type="uml:Package" xmi:id="_pMAE8OiJEeanXYNMF0svnQ" name="testdata">
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_LrxhQOiJEeanXYNMF0svnQ" name="uint16_t">
-        <ownedComment xmi:id="_TsAuQOiJEeanXYNMF0svnQ" annotatedElement="_LrxhQOiJEeanXYNMF0svnQ">
-          <body>16Bit unsigned integer</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_x0FKgOiIEeanXYNMF0svnQ" name="uint8_t">
-        <ownedComment xmi:id="_1tBK8OiIEeanXYNMF0svnQ" annotatedElement="_x0FKgOiIEeanXYNMF0svnQ">
-          <body>8Bit unsigned integer</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_0h8pgOiJEeanXYNMF0svnQ" name="uint32_t">
-        <ownedComment xmi:id="_3qlOYOiJEeanXYNMF0svnQ" annotatedElement="_0h8pgOiJEeanXYNMF0svnQ">
-          <body>32Bit unsigned integer type</body>
-        </ownedComment>
-      </packagedElement>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_91cOIOiJEeanXYNMF0svnQ" name="uint64_t">
-        <ownedComment xmi:id="_--4icOiJEeanXYNMF0svnQ" annotatedElement="_91cOIOiJEeanXYNMF0svnQ">
-          <body>64Bit unsigned integer</body>
-        </ownedComment>
-      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_wuyy4OiHEeahyN02DkOTsg" name="random_variable">
         <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_KEt5UOiIEeanXYNMF0svnQ" parameter="_KEw8oOiIEeanXYNMF0svnQ _KEyKwOiIEeanXYNMF0svnQ">
           <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_KEw8oOiIEeanXYNMF0svnQ" default="_KEw8oeiIEeanXYNMF0svnQ" parameteredElement="_KEw8oeiIEeanXYNMF0svnQ">
@@ -34,10 +14,116 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_6UIK4OiGEea98MIxkBp_xA" name="gaussian_random_variable &lt;T>" useCase="_06mAwOiOEeanXYNMF0svnQ">
         <templateBinding xmi:id="_vgArkOiHEeahyN02DkOTsg"/>
+        <generalization xmi:id="_MpCh4OklEeaTH4nLdZgDFw" general="_wuyy4OiHEeahyN02DkOTsg"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_dmJp4OiOEeanXYNMF0svnQ" name="uniform_random_variable &lt;T>" useCase="_xUmxgOiOEeanXYNMF0svnQ"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_dmJp4OiOEeanXYNMF0svnQ" name="uniform_random_variable &lt;T>" useCase="_xUmxgOiOEeanXYNMF0svnQ">
+        <generalization xmi:id="_LDcdEOklEeaTH4nLdZgDFw" general="_wuyy4OiHEeahyN02DkOTsg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_xUmxgOiOEeanXYNMF0svnQ" name="create uniform random numbers" subject="_dmJp4OiOEeanXYNMF0svnQ"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_06mAwOiOEeanXYNMF0svnQ" name="generate Gaussian random numbers" subject="_6UIK4OiGEea98MIxkBp_xA"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_bRu-sOknEeaTH4nLdZgDFw" name="Software test suite"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_hg-IIOknEeaTH4nLdZgDFw" name="Generating random string">
+        <ownedComment xmi:id="_nL0LEOknEeaTH4nLdZgDFw" annotatedElement="_hg-IIOknEeaTH4nLdZgDFw">
+          <body>Create single random std::string instances.</body>
+        </ownedComment>
+        <include xmi:id="_udXtIOknEeaTH4nLdZgDFw" addition="_xUmxgOiOEeanXYNMF0svnQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_e3sYwOknEeaTH4nLdZgDFw" memberEnd="_e3sYweknEeaTH4nLdZgDFw _e3s_0OknEeaTH4nLdZgDFw">
+        <ownedEnd xmi:id="_e3sYweknEeaTH4nLdZgDFw" type="_bRu-sOknEeaTH4nLdZgDFw" association="_e3sYwOknEeaTH4nLdZgDFw"/>
+        <ownedEnd xmi:id="_e3s_0OknEeaTH4nLdZgDFw" type="_xUmxgOiOEeanXYNMF0svnQ" association="_e3sYwOknEeaTH4nLdZgDFw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_fnIRoOknEeaTH4nLdZgDFw" memberEnd="_fnI4sOknEeaTH4nLdZgDFw _fnJfwOknEeaTH4nLdZgDFw">
+        <ownedEnd xmi:id="_fnI4sOknEeaTH4nLdZgDFw" type="_bRu-sOknEeaTH4nLdZgDFw" association="_fnIRoOknEeaTH4nLdZgDFw"/>
+        <ownedEnd xmi:id="_fnJfwOknEeaTH4nLdZgDFw" type="_06mAwOiOEeanXYNMF0svnQ" association="_fnIRoOknEeaTH4nLdZgDFw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_rAzfoOknEeaTH4nLdZgDFw" memberEnd="_rA0GsOknEeaTH4nLdZgDFw _rA0GseknEeaTH4nLdZgDFw">
+        <ownedEnd xmi:id="_rA0GsOknEeaTH4nLdZgDFw" type="_hg-IIOknEeaTH4nLdZgDFw" association="_rAzfoOknEeaTH4nLdZgDFw"/>
+        <ownedEnd xmi:id="_rA0GseknEeaTH4nLdZgDFw" type="_bRu-sOknEeaTH4nLdZgDFw" association="_rAzfoOknEeaTH4nLdZgDFw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Bmix4OkyEea0VtX8gLoHkQ" name="dist">
+        <ownedComment xmi:id="_EukSwOkyEea0VtX8gLoHkQ" annotatedElement="_Bmix4OkyEea0VtX8gLoHkQ">
+          <body>Subpackage with distribution types.</body>
+        </ownedComment>
+      </packagedElement>
     </packagedElement>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_xUmxgOiOEeanXYNMF0svnQ" name="create uniform random numbers" subject="_dmJp4OiOEeanXYNMF0svnQ"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_06mAwOiOEeanXYNMF0svnQ" name="generate Gaussian random numbers" subject="_6UIK4OiGEea98MIxkBp_xA"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_KAze4OkmEeaTH4nLdZgDFw" name="std">
+    <ownedComment xmi:id="_OZYosOkmEeaTH4nLdZgDFw" annotatedElement="_KAze4OkmEeaTH4nLdZgDFw">
+      <body>Components provided by the C++ standard library.
+</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_LrxhQOiJEeanXYNMF0svnQ" name="uint16_t">
+      <ownedComment xmi:id="_TsAuQOiJEeanXYNMF0svnQ" annotatedElement="_LrxhQOiJEeanXYNMF0svnQ">
+        <body>16Bit unsigned integer</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_x0FKgOiIEeanXYNMF0svnQ" name="uint8_t">
+      <ownedComment xmi:id="_1tBK8OiIEeanXYNMF0svnQ" annotatedElement="_x0FKgOiIEeanXYNMF0svnQ">
+        <body>8Bit unsigned integer</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_0h8pgOiJEeanXYNMF0svnQ" name="uint32_t">
+      <ownedComment xmi:id="_3qlOYOiJEeanXYNMF0svnQ" annotatedElement="_0h8pgOiJEeanXYNMF0svnQ">
+        <body>32Bit unsigned integer type</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_91cOIOiJEeanXYNMF0svnQ" name="uint64_t">
+      <ownedComment xmi:id="_--4icOiJEeanXYNMF0svnQ" annotatedElement="_91cOIOiJEeanXYNMF0svnQ">
+        <body>64Bit unsigned integer</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_dEWoUOkmEeaTH4nLdZgDFw" name="int8_t">
+      <ownedComment xmi:id="_scpoAOkmEeaTH4nLdZgDFw" annotatedElement="_dEWoUOkmEeaTH4nLdZgDFw">
+        <body>8Bit singed integer type</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_fwNKkOkmEeaTH4nLdZgDFw" name="int16_t">
+      <ownedComment xmi:id="_tudOIOkmEeaTH4nLdZgDFw" annotatedElement="_fwNKkOkmEeaTH4nLdZgDFw">
+        <body>16Bit signed integer type</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_ix_gkOkmEeaTH4nLdZgDFw" name="int32_t">
+      <ownedComment xmi:id="_vJJDcOkmEeaTH4nLdZgDFw" annotatedElement="_ix_gkOkmEeaTH4nLdZgDFw">
+        <body>32Bit signed integer type</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_mJ864OkmEeaTH4nLdZgDFw" name="int64_t">
+      <ownedComment xmi:id="_wLOykOkmEeaTH4nLdZgDFw" annotatedElement="_mJ864OkmEeaTH4nLdZgDFw">
+        <body>64Bit signed integer type</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_KBp-AOknEeaTH4nLdZgDFw" name="bool">
+      <ownedComment xmi:id="_MXdXwOknEeaTH4nLdZgDFw" annotatedElement="_KBp-AOknEeaTH4nLdZgDFw">
+        <body>Two valued boolean type (special to C++) </body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_mLlAoOkoEeaTH4nLdZgDFw" name="string"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_pkwi8OkoEeaTH4nLdZgDFw" name="float">
+      <ownedComment xmi:id="_XdfmIOkpEeaTH4nLdZgDFw" annotatedElement="_pkwi8OkoEeaTH4nLdZgDFw">
+        <body>32Bit IEEE-754 floating point type</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bzt_gOkpEeaTH4nLdZgDFw" name="double">
+      <ownedComment xmi:id="_enP3EOkpEeaTH4nLdZgDFw" annotatedElement="_bzt_gOkpEeaTH4nLdZgDFw">
+        <body>64Bit IEEE-754 floating point type</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_wcW3cOkpEeaTH4nLdZgDFw" name="complex">
+      <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_F-h4EOktEeaTH4nLdZgDFw" parameter="_F-ifIOktEeaTH4nLdZgDFw">
+        <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_F-ifIOktEeaTH4nLdZgDFw" default="_F-ifIektEeaTH4nLdZgDFw" parameteredElement="_F-ifIektEeaTH4nLdZgDFw">
+          <ownedDefault xmi:type="uml:Class" xmi:id="_F-ifIektEeaTH4nLdZgDFw" name="T" templateParameter="_F-ifIOktEeaTH4nLdZgDFw"/>
+        </ownedParameter>
+      </ownedTemplateSignature>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_3fCQAOkpEeaTH4nLdZgDFw" name="complex_float">
+      <templateBinding xmi:id="_LKfmoOktEeaTH4nLdZgDFw" signature="_F-h4EOktEeaTH4nLdZgDFw">
+        <parameterSubstitution xmi:id="_LKfmoektEeaTH4nLdZgDFw" actual="_pkwi8OkoEeaTH4nLdZgDFw" formal="_F-ifIOktEeaTH4nLdZgDFw"/>
+      </templateBinding>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_MydxYOkqEeaTH4nLdZgDFw" name="complex_double">
+      <templateBinding xmi:id="_HAXvkOktEeaTH4nLdZgDFw" signature="_F-h4EOktEeaTH4nLdZgDFw">
+        <parameterSubstitution xmi:id="_HAYWoOktEeaTH4nLdZgDFw" actual="_bzt_gOkpEeaTH4nLdZgDFw" formal="_F-ifIOktEeaTH4nLdZgDFw"/>
+      </templateBinding>
+    </packagedElement>
+  </packagedElement>
 </uml:Model>
